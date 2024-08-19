@@ -1,0 +1,106 @@
+/* Estilos globais */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total do elemento */
+    font-family: "Roboto", sans-serif; /* Define a fonte padrão para todos os elementos */
+}
+
+/* Definição de variável global de cor */
+:root {
+    --color-global: rgb(32, 184, 222); /* Cor global utilizada em várias partes do CSS */
+}
+
+/* Estilo do corpo da página */
+body {
+    width: 100vw; /* Define a largura do corpo para ocupar 100% da largura da viewport */
+    height: 100vh; /* Define a altura do corpo para ocupar 100% da altura da viewport */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    overflow: hidden; /* Remove a rolagem da página */
+}
+
+/* Estilo do vídeo de fundo */
+#background-video {
+    position: absolute; /* Posiciona o vídeo de forma absoluta em relação ao body */
+    top: 50%; /* Posiciona o vídeo no meio da tela verticalmente */
+    left: 50%; /* Posiciona o vídeo no meio da tela horizontalmente */
+    min-width: 100%; /* Garante que o vídeo cubra toda a largura da viewport */
+    min-height: 100%; /* Garante que o vídeo cubra toda a altura da viewport */
+    width: auto; /* Ajusta a largura do vídeo conforme necessário */
+    height: auto; /* Ajusta a altura do vídeo conforme necessário */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    transform: translate(-50%, -50%); /* Centraliza o vídeo em relação ao seu centro */
+    background-size: cover; /* Faz o vídeo cobrir toda a área sem distorcer */
+}
+
+/* Estilo para o bloco de busca */
+.content__busca {
+    position: relative; /* Define a posição relativa para poder usar z-index */
+    z-index: 1; /* Garante que o bloco de busca esteja acima do vídeo */
+    color: var(--color-global); /* Usa a cor global definida */
+    text-align: center; /* Centraliza o texto dentro do bloco de busca */
+    padding: 30px; /* Adiciona espaçamento interno ao bloco de busca */
+    background: rgba(0, 0, 0, 0.5); /* Define um fundo semitransparente */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao bloco de busca */
+    width: 85%; /* Define a largura do bloco de busca para 85% da largura da viewport */
+    max-width: 25rem; /* Define uma largura máxima para o bloco de busca */
+}
+
+/* Estilo para o campo de busca */
+.input-seach {
+    border: none; /* Remove a borda padrão do campo de busca */
+    outline: none; /* Remove o contorno padrão do campo de busca ao focar */
+    padding: 6px; /* Adiciona espaçamento interno ao campo de busca */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao campo de busca */
+    font-size: 20px; /* Define o tamanho da fonte para o texto dentro do campo */
+    background-color: rgba(0, 0, 0, 0.5); /* Define um fundo semitransparente */
+    color: var(--color-global); /* Define a cor do texto dentro do campo de busca */
+    width: calc(100% - 50px); /* Ajusta a largura do campo de busca para preencher a largura disponível, considerando o padding */
+    cursor: pointer; /* Muda o cursor para pointer ao passar sobre o campo de busca */
+}
+
+/* Estilo para o botão de busca */
+.button-seach {
+    background: rgba(0, 0, 0, 0.5); /* Define o fundo como transparente */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 0; /* Remove o padding padrão do botão */
+    cursor: pointer; /* Muda o cursor para pointer ao passar sobre o botão */
+    border-radius: 50%;/* Muda a cor do fundo do icone da lupa*/
+}
+
+/* Estilo para o ícone dentro do botão de busca */
+.button-seach i {
+    width: 30px; /* Define a largura do ícone */
+    height: 30px; /* Define a altura do ícone */
+    color: var(--color-global); /* Define a cor do ícone usando a cor global */
+    background: none; /* Remove qualquer fundo aplicado ao ícone */
+    display: inline-block; /* Garante que o ícone se comporte como um bloco inline */
+    line-height: 30px; /* Alinha verticalmente o ícone */
+    text-align: center; /* Alinha horizontalmente o ícone */
+}
+
+/* Estilos para títulos e informações */
+.title__cidade {
+    font-size: 1.5rem; /* Define o tamanho da fonte para o título da cidade */
+    font-weight: 400; /* Define o peso da fonte para o título da cidade */
+    margin-top: 0.5rem; /* Adiciona uma margem superior ao título da cidade */
+}
+
+.title__tempo {
+    margin-top: 0.5rem; /* Adiciona uma margem superior ao título do tempo */
+}
+
+.content__infor {
+    margin-top: 0.5rem; /* Adiciona uma margem superior às informações de clima */
+}
+
+.title__clima {
+    margin-top: 0.3rem; /* Adiciona uma margem superior ao título do clima */
+    text-transform: capitalize;/* deixa o texto com letra maiuscula*/
+}
+
+.title__umidade {
+    margin-top: 0.3rem; /* Adiciona uma margem superior ao título da umidade */
+}
