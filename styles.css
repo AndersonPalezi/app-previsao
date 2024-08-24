@@ -80,7 +80,13 @@ body {
     line-height: 30px; /* Alinha verticalmente o ícone */
     text-align: center; /* Alinha horizontalmente o ícone */
 }
-
+/*  seçao clima */
+.clima__icon {
+    color: var(--color-global); /* Usa a cor global definida */
+    padding: 30px; /* Adiciona espaçamento interno ao bloco de busca */
+    background: rgba(0, 0, 0, 0.5); /* Define um fundo semitransparente */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao bloco de busca */
+}
 /* Estilos para títulos e informações */
 .title__cidade {
     font-size: 1.5rem; /* Define o tamanho da fonte para o título da cidade */
@@ -103,4 +109,32 @@ body {
 
 .title__umidade {
     margin-top: 0.3rem; /* Adiciona uma margem superior ao título da umidade */
+}
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+    .content__busca {
+        width: 90%;
+    }
+
+    .title__cidade {
+        font-size: 1.2rem;
+    }
+
+    .button-seach i {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media (max-width: 480px) {
+
+    .title__tempo {
+        font-size: 1rem;
+    }
+
+    .content__infor {
+        display: flex;
+        flex-direction: column;
+    }
 }
